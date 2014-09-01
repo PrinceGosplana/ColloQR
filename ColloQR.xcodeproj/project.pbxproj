@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9559CF9A19B4927A0000C0AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9559CF9919B4927A0000C0AB /* Foundation.framework */; };
+		9559CF9C19B4927A0000C0AB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9559CF9B19B4927A0000C0AB /* CoreGraphics.framework */; };
+		9559CF9E19B4927A0000C0AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9559CF9D19B4927A0000C0AB /* UIKit.framework */; };
+		9559CFA419B4927B0000C0AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9559CFA219B4927B0000C0AB /* InfoPlist.strings */; };
+		9559CFA619B4927B0000C0AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9559CFA519B4927B0000C0AB /* main.m */; };
+		9559CFAA19B4927B0000C0AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9559CFA919B4927B0000C0AB /* AppDelegate.m */; };
+		9559CFAC19B4927B0000C0AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9559CFAB19B4927B0000C0AB /* Images.xcassets */; };
+		9559CFB319B4927B0000C0AB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9559CFB219B4927B0000C0AB /* XCTest.framework */; };
+		9559CFB419B4927B0000C0AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9559CF9919B4927A0000C0AB /* Foundation.framework */; };
+		9559CFB519B4927B0000C0AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9559CF9D19B4927A0000C0AB /* UIKit.framework */; };
+		9559CFBD19B4927B0000C0AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9559CFBB19B4927B0000C0AB /* InfoPlist.strings */; };
+		9559CFBF19B4927B0000C0AB /* ColloQRTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9559CFBE19B4927B0000C0AB /* ColloQRTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9559CFB619B4927B0000C0AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9559CF8E19B492790000C0AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9559CF9519B4927A0000C0AB;
+			remoteInfo = ColloQR;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9559CF9619B4927A0000C0AB /* ColloQR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColloQR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9559CF9919B4927A0000C0AB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9559CF9B19B4927A0000C0AB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9559CF9D19B4927A0000C0AB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9559CFA119B4927B0000C0AB /* ColloQR-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ColloQR-Info.plist"; sourceTree = "<group>"; };
+		9559CFA319B4927B0000C0AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9559CFA519B4927B0000C0AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9559CFA719B4927B0000C0AB /* ColloQR-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ColloQR-Prefix.pch"; sourceTree = "<group>"; };
+		9559CFA819B4927B0000C0AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9559CFA919B4927B0000C0AB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9559CFAB19B4927B0000C0AB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9559CFB119B4927B0000C0AB /* ColloQRTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColloQRTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9559CFB219B4927B0000C0AB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		9559CFBA19B4927B0000C0AB /* ColloQRTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ColloQRTests-Info.plist"; sourceTree = "<group>"; };
+		9559CFBC19B4927B0000C0AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9559CFBE19B4927B0000C0AB /* ColloQRTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColloQRTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9559CF9319B4927A0000C0AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9559CF9C19B4927A0000C0AB /* CoreGraphics.framework in Frameworks */,
+				9559CF9E19B4927A0000C0AB /* UIKit.framework in Frameworks */,
+				9559CF9A19B4927A0000C0AB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9559CFAE19B4927B0000C0AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9559CFB319B4927B0000C0AB /* XCTest.framework in Frameworks */,
+				9559CFB519B4927B0000C0AB /* UIKit.framework in Frameworks */,
+				9559CFB419B4927B0000C0AB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9559CF8D19B492790000C0AB = {
+			isa = PBXGroup;
+			children = (
+				9559CF9F19B4927A0000C0AB /* ColloQR */,
+				9559CFB819B4927B0000C0AB /* ColloQRTests */,
+				9559CF9819B4927A0000C0AB /* Frameworks */,
+				9559CF9719B4927A0000C0AB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9559CF9719B4927A0000C0AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9559CF9619B4927A0000C0AB /* ColloQR.app */,
+				9559CFB119B4927B0000C0AB /* ColloQRTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9559CF9819B4927A0000C0AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9559CF9919B4927A0000C0AB /* Foundation.framework */,
+				9559CF9B19B4927A0000C0AB /* CoreGraphics.framework */,
+				9559CF9D19B4927A0000C0AB /* UIKit.framework */,
+				9559CFB219B4927B0000C0AB /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9559CF9F19B4927A0000C0AB /* ColloQR */ = {
+			isa = PBXGroup;
+			children = (
+				9559CFA819B4927B0000C0AB /* AppDelegate.h */,
+				9559CFA919B4927B0000C0AB /* AppDelegate.m */,
+				9559CFAB19B4927B0000C0AB /* Images.xcassets */,
+				9559CFA019B4927A0000C0AB /* Supporting Files */,
+			);
+			path = ColloQR;
+			sourceTree = "<group>";
+		};
+		9559CFA019B4927A0000C0AB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9559CFA119B4927B0000C0AB /* ColloQR-Info.plist */,
+				9559CFA219B4927B0000C0AB /* InfoPlist.strings */,
+				9559CFA519B4927B0000C0AB /* main.m */,
+				9559CFA719B4927B0000C0AB /* ColloQR-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9559CFB819B4927B0000C0AB /* ColloQRTests */ = {
+			isa = PBXGroup;
+			children = (
+				9559CFBE19B4927B0000C0AB /* ColloQRTests.m */,
+				9559CFB919B4927B0000C0AB /* Supporting Files */,
+			);
+			path = ColloQRTests;
+			sourceTree = "<group>";
+		};
+		9559CFB919B4927B0000C0AB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9559CFBA19B4927B0000C0AB /* ColloQRTests-Info.plist */,
+				9559CFBB19B4927B0000C0AB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9559CF9519B4927A0000C0AB /* ColloQR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9559CFC219B4927B0000C0AB /* Build configuration list for PBXNativeTarget "ColloQR" */;
+			buildPhases = (
+				9559CF9219B4927A0000C0AB /* Sources */,
+				9559CF9319B4927A0000C0AB /* Frameworks */,
+				9559CF9419B4927A0000C0AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ColloQR;
+			productName = ColloQR;
+			productReference = 9559CF9619B4927A0000C0AB /* ColloQR.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9559CFB019B4927B0000C0AB /* ColloQRTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9559CFC519B4927B0000C0AB /* Build configuration list for PBXNativeTarget "ColloQRTests" */;
+			buildPhases = (
+				9559CFAD19B4927B0000C0AB /* Sources */,
+				9559CFAE19B4927B0000C0AB /* Frameworks */,
+				9559CFAF19B4927B0000C0AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9559CFB719B4927B0000C0AB /* PBXTargetDependency */,
+			);
+			name = ColloQRTests;
+			productName = ColloQRTests;
+			productReference = 9559CFB119B4927B0000C0AB /* ColloQRTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9559CF8E19B492790000C0AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = None;
+				TargetAttributes = {
+					9559CFB019B4927B0000C0AB = {
+						TestTargetID = 9559CF9519B4927A0000C0AB;
+					};
+				};
+			};
+			buildConfigurationList = 9559CF9119B492790000C0AB /* Build configuration list for PBXProject "ColloQR" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9559CF8D19B492790000C0AB;
+			productRefGroup = 9559CF9719B4927A0000C0AB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9559CF9519B4927A0000C0AB /* ColloQR */,
+				9559CFB019B4927B0000C0AB /* ColloQRTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9559CF9419B4927A0000C0AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9559CFA419B4927B0000C0AB /* InfoPlist.strings in Resources */,
+				9559CFAC19B4927B0000C0AB /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9559CFAF19B4927B0000C0AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9559CFBD19B4927B0000C0AB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9559CF9219B4927A0000C0AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9559CFAA19B4927B0000C0AB /* AppDelegate.m in Sources */,
+				9559CFA619B4927B0000C0AB /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9559CFAD19B4927B0000C0AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9559CFBF19B4927B0000C0AB /* ColloQRTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9559CFB719B4927B0000C0AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9559CF9519B4927A0000C0AB /* ColloQR */;
+			targetProxy = 9559CFB619B4927B0000C0AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9559CFA219B4927B0000C0AB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9559CFA319B4927B0000C0AB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9559CFBB19B4927B0000C0AB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9559CFBC19B4927B0000C0AB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9559CFC019B4927B0000C0AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9559CFC119B4927B0000C0AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9559CFC319B4927B0000C0AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ColloQR/ColloQR-Prefix.pch";
+				INFOPLIST_FILE = "ColloQR/ColloQR-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9559CFC419B4927B0000C0AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ColloQR/ColloQR-Prefix.pch";
+				INFOPLIST_FILE = "ColloQR/ColloQR-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9559CFC619B4927B0000C0AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ColloQR.app/ColloQR";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ColloQR/ColloQR-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ColloQRTests/ColloQRTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		9559CFC719B4927B0000C0AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ColloQR.app/ColloQR";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ColloQR/ColloQR-Prefix.pch";
+				INFOPLIST_FILE = "ColloQRTests/ColloQRTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9559CF9119B492790000C0AB /* Build configuration list for PBXProject "ColloQR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9559CFC019B4927B0000C0AB /* Debug */,
+				9559CFC119B4927B0000C0AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9559CFC219B4927B0000C0AB /* Build configuration list for PBXNativeTarget "ColloQR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9559CFC319B4927B0000C0AB /* Debug */,
+				9559CFC419B4927B0000C0AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9559CFC519B4927B0000C0AB /* Build configuration list for PBXNativeTarget "ColloQRTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9559CFC619B4927B0000C0AB /* Debug */,
+				9559CFC719B4927B0000C0AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9559CF8E19B492790000C0AB /* Project object */;
+}
