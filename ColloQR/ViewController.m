@@ -15,6 +15,7 @@
     BOOL _running;
     AVCaptureMetadataOutput * _metadataOutput;
     NSMutableDictionary * _barcodes;
+    AVSpeechSynthesizer * _speechSynthesizer;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -44,6 +45,7 @@
    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidEnterBackground:) name:UIApplicationDidEnterBackgroundNotification object:nil];
     
     _barcodes = [NSMutableDictionary new];
+    _speechSynthesizer = [[AVSpeechSynthesizer alloc] init];
 }
 
 
@@ -73,6 +75,10 @@
     [_captureSession startRunning];
     _running = YES;
     _metadataOutput.metadataObjectTypes = _metadataOutput.availableMetadataObjectTypes;
+    
+    // speech
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback withOptions:0 error:nil];
+    [[AVAudioSession sharedInstance] setActive:YES error:nil];
 }
 
 - (void) stopRunning {
@@ -81,6 +87,9 @@
     }
     [_captureSession stopRunning];
     _running = NO;
+    
+    // speech
+    [[AVAudioSession sharedInstance] setActive:NO error:nil];
 }
 - (void)didReceiveMemoryWarning
 {
@@ -119,23 +128,37 @@
 }
 
 - (void) captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection {
-        
+    
+    NSSet * originalBarcodes = [NSSet setWithArray:_barcodes.allValues];
+    // 1
         NSMutableSet * foundBarcodes = [NSMutableSet new];
         
         [metadataObjects enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
              NSLog(@"Metadata: %@", obj);
-        
+        // 2
         if ([obj isKindOfClass:[AVMetadataMachineReadableCodeObject class]]) {
-            AVMetadataMachineReadableCodeObject * code = (AVMetadataMachineReadableCodeObject *)(AVMetadataMachineReadableCodeObject *)[_previewLayer transformedMetadataObjectForMetadataObject:obj];
+            // 3
+            AVMetadataMachineReadableCodeObject * code = (AVMetadataMachineReadableCodeObject *)[_previewLayer transformedMetadataObjectForMetadataObject:obj];
+            // 4
             Barcode * barcode = [self processMetadataObject:code];
             [foundBarcodes addObject:barcode];
         }
 
         }];
-        
+
+    NSMutableSet * newBarcodes = [foundBarcodes mutableCopy];
+    [newBarcodes minusSet:originalBarcodes];
+    
+    NSMutableSet * goneBarcodes = [originalBarcodes mutableCopy];
+    [goneBarcodes minusSet:foundBarcodes];
+    
+    [goneBarcodes enumerateObjectsUsingBlock:^(Barcode * barcode, BOOL *stop) {
+        [_barcodes removeObjectForKey:barcode.metadataObject.stringValue];
+    }];
+    
         dispatch_sync(dispatch_get_main_queue(), ^{
             // remove all old layers
-            
+            // 5
             NSArray * allSublayers = [_previewView.layer.sublayers copy];
             [allSublayers enumerateObjectsUsingBlock:^(CALayer * layer, NSUInteger idx, BOOL *stop) {
                 if (layer != _previewLayer) {
@@ -143,6 +166,7 @@
                 }
             }];
             // add new layers
+            // 6
             [foundBarcodes enumerateObjectsUsingBlock:^(Barcode * barcode, BOOL *stop) {
                 CAShapeLayer * boundingBoxLayer = [CAShapeLayer new];
                 boundingBoxLayer.path = barcode.boundingBoxPath.CGPath;
@@ -157,6 +181,16 @@
                 cornerPathLayer.strokeColor = [UIColor blueColor].CGColor;
                 cornerPathLayer.fillColor = [UIColor colorWithRed:0.0f green:0.0f blue:1.0f alpha:0.5f].CGColor;
                 [_previewView.layer addSublayer:cornerPathLayer];
+            }];
+            
+            // speech
+            [newBarcodes enumerateObjectsUsingBlock:^(Barcode * barcode, BOOL *stop) {
+                AVSpeechUtterance * utterance = [[AVSpeechUtterance alloc] initWithString:barcode.metadataObject.stringValue];
+                utterance.rate = AVSpeechUtteranceDefaultSpeechRate + ((AVSpeechUtteranceMaximumSpeechRate - AVSpeechUtteranceMinimumSpeechRate) * 0.5f);
+                utterance.volume = 1.0f;
+                utterance.pitchMultiplier = 1.2f;
+                
+                [_speechSynthesizer speakUtterance:utterance];
             }];
         });
 }
